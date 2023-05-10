@@ -19,7 +19,14 @@ var questionIndex = 0;
 var curQuestion = qa_data[0];
 var questionActive = true;
 
-document.getElementById("question_text").innerHTML = curQuestion.question;
+promptStart();
+function promptStart(){
+  document.getElementById("question_text").innerHTML = "Select the first group!";
+  see_answer_button.style.display = 'none';
+  next_question_button.style.display = 'none';
+  see_answer_button.addEventListener('click', nextQuestion);
+}
+
 
 function startActivity(){
   // initialize the container state
@@ -62,9 +69,7 @@ function promptNextGroup(){
   see_answer_button.style.display = 'none';
   next_question_button.style.display = 'none';
   see_answer_button.addEventListener('click', nextQuestion);
-
 }
-
 
 function showAnswer() {
   if (questionActive) {
