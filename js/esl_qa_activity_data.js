@@ -1,6 +1,6 @@
 const qa_data=[
 	{"group": "Canada", "question_index": "0", "question_num": "1", "question": "What is Canada’s capital city?", "answer": "It is Ottawa.", "note":""}, 
-	{"group": "Canada", "question_index": "1", "question_num": "2_a", "question": "Where is Canada located?", "answer": "It is above the USA.", "note":""},
+	{"group": "Canada", "question_index": "1", "question_num": "2", "question": "Where is Canada located?", "answer": "It is above the USA.", "note":""},
 	{"group": "Canada", "question_index": "2", "question_num": "2 Bonus", "question": "How many provinces does Canada have?", "answer": "It has 10 provinces.", "note":"Bonus Question"},
 	{"group": "Canada", "question_index": "3", "question_num": "3", "question": "What do people in Canada eat?", "answer": "They eat poutine and pancakes with maple syrup.", "note":""},
 	{"group": "Canada", "question_index": "4", "question_num": "4", "question": "What are two cities in Canada?", "answer": "They are Vancouver and Toronto.", "note":""},
