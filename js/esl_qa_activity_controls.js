@@ -56,7 +56,7 @@ function nextQuestion(){
     document.getElementById("question_text").innerHTML = curQuestion.question;
     document.getElementById("current_group_name").innerHTML = `${curGroup} - Question ${curQuestion.question_num}`;
 
-    document.getElementById("question_image").src = "css/group_1.png";
+    document.getElementById("question_image").src = `images/${curQuestion.image}.png`;
   }
 }
 
