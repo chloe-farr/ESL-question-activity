@@ -1,6 +1,7 @@
+//Change question data for your own game
 const qa_data=[
 	{"group": "Canada", "question_index": "0", "question_num": "1", "question": "What is Canada’s capital city?", "answer": "It is Ottawa.", "note":"", "image":"ottawa"}, 
-	{"group": "Canada", "question_index": "1", "question_num": "2", "question": "Where is Canada located?", "answer": "It is above the USA.", "note":"", "image":""},
+	{"group": "Canada", "question_index": "1", "question_num": "2", "question": "Where is Canada located?", "answer": "It is above the USA.", "note":"", "image":"canada_america_map"},
 	{"group": "Canada", "question_index": "2", "question_num": "2 Bonus", "question": "How many provinces does Canada have?", "answer": "It has 10 provinces.", "note":"Bonus Question", "image":"provinces"},
 	{"group": "Canada", "question_index": "3", "question_num": "3", "question": "What do people in Canada eat?", "answer": "They eat poutine and pancakes with maple syrup.", "note":"", "image":"canada_food"},
 	{"group": "Canada", "question_index": "4", "question_num": "4", "question": "What are two cities in Canada?", "answer": "They are Vancouver and Toronto.", "note":"", "image":"vancouver_toronto"},
@@ -39,18 +40,36 @@ const qa_data=[
 	{"group": "France", "question_index": "6", "question_num": "7", "question": "What is a holiday in France?", "answer": "It is New Year’s Day.", "note":"", "image":"nyd_paris"},
 	{"group": "France", "question_index": "7", "question_num": "8", "question": "When is New Year’s Day?", "answer": "It is on January 1st.", "note":"", "image":"nyd_paris"},
 	{"group": "France", "question_index": "8", "question_num": "9", "question": "What language do people speak in France?", "answer": "They speak French.", "note":"", "image":"french_language"},
-	{"group": "France", "question_index": "9", "question_num": "9 Bonus", "question": "What does ’hello’ mean in French?", "answer": "’Hello’ means bonjour.", "note":"", "image":""},
+	{"group": "France", "question_index": "9", "question_num": "9 Bonus", "question": "What does ’hello’ mean in French?", "answer": "’Hello’ means bonjour.", "note":"", "image":"hello_languages"},
 	{"group": "France", "question_index": "10", "question_num": "10", "question": "Where do some people go on holiday in France?", "answer": "Many people like to go on holiday to Cannes.", "note":"", "image":"cannes"}
 ];
 
+//Change string for your own game
+const titleName = "Class V’s Wh- Country Question and Answers";
+document.getElementById("titleName").innerHTML = titleName;
+
+
+// Retrieve unique groups from qa_data array
 const uniqueGroups = getUniqueGroups(qa_data);
+
+// Output the unique groups
 console.log(uniqueGroups); // Output: ["Canada", "India"]
 
-
+/**
+ * Function to get unique groups from the qa_data array
+ * \@param {Array} qa_data - Array containing question and answer data
+ * \@returns {Array} - Array of unique groups
+ */
 function getUniqueGroups(qa_data) {
-	const uniqueGroups = new Set();
-	qa_data.forEach((item) => {
-    	uniqueGroups.add(item.group);
-  	});
+  // Create a new Set to store unique groups
+  const uniqueGroups = new Set();
+
+  // Iterate over the qa_data array
+  qa_data.forEach((item) => {
+    // Add the group value to the uniqueGroups Set
+    uniqueGroups.add(item.group);
+  });
+
+  // Convert the Set to an array and return it
   return Array.from(uniqueGroups);
 }

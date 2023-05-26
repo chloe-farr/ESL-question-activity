@@ -1,9 +1,11 @@
+/* Set the position, background color, and opacity for the body */
 body {
   position: relative;
   background-color: #fff; /* fallback color */
   opacity: 1;
 }
 
+/* Create a fixed background image for the body */
 body::before {
   content: "";
   position: fixed;
@@ -17,49 +19,69 @@ body::before {
   z-index: -1;
 }
 
+/* Set the position and z-index for the content */
 .content {
   position: relative;
-  z-index: 1; /* place the content in front of the background image */
+  z-index: 1;
 }
 
+/* Set the opacity for paragraphs */
 p {
-  opacity: 1 !important; /* set the opacity of the text */
+  opacity: 1 !important;
 }
 
+/* Center align the header and set its width and opacity */
 header {
   text-align: center;
   width: 100%;
   opacity: 1;
 }
 
+/* Set the margin, font size, and opacity for h1 elements */
 h1 {
   margin: 0;
-  font-size: 3em;
+  font-size: 3.8em;
   opacity: 1;
 }
 
-.group-button-container {
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px 0;
+  align-items: flex-start; /* Align items to the top */
 }
 
+
+/* Set the display, alignment, and margin for the group button container */
+.group-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start; /* Align buttons to the left */
+  margin: 20px 0;
+  width: 15vw;
+  height: 40vh; /* Set a specific height for the container (40% of viewport height) */
+}
+
+/* Style for the group buttons */
 .group-button {
+  display: inline-flex; /* Display the buttons as inline flex */
+  align-items: center; /* Align text vertically within the button */
+  justify-content: center; /* Center the text horizontally within the button */
   position: relative;
   border-radius: 20px;
   border: 2px solid black;
-  font-size: 1.5em;
+  font-size: 2.1em;
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px 20px;
-  margin: 0 10px;
+  margin: 5px 15px;
   opacity: 1;
   transition: all 0.3s;
   z-index: 1;
+  width: 90%;
+  flex-shrink: 1; /* Allow text to shrink if needed */
 }
 
-
+/* Create a background for the group buttons */
 .group-button::before {
   content: '';
   position: absolute;
@@ -76,119 +98,124 @@ h1 {
   z-index: -1;
 }
 
+/* Style for group buttons on hover */
 .group-button:hover {
   border-color: yellow;
   position: relative;
   border-radius: 20px;
   border: 2px solid black;
-  font-size: 1.5em;
+  font-size: 2.3em;
   font-weight: bold;
   text-transform: uppercase;
   padding: 10px 20px;
   margin: 0 10px;
   opacity: 1;
-  transition: all 0.3s;
+  transition: all 0.1s;
+  box-sizing: border-box; /* Include border and padding in overall width */
+
 }
 
+/* Style for the background of group buttons on hover */
 .group-button:hover::before {
   opacity: 0.7;
   border-color: yellow;
 }
 
+/* Style for group buttons on active state */
 .group-button:active {
   opacity: 1;
 }
 
-.question_container {
+.qa-container {
+  display: flex;
+  /*flex-direction: column; /* Stack question and answer containers vertically */
+  width: 90%;
+}
+
+.question_container,
+.answer_container {
+  min-width: 64vw; /* Set the minimum width to 70% of viewport width */
+  margin: 0 auto; /* Center the containers horizontally */
   text-align: center;
   margin: 0 auto;
-  width: 60%;
   background-color: white;
   border: 4px double #8B4513;
   border-radius: 20px;
-  padding-top: 20px; /* add padding-top */
-  padding-bottom: 20px; /* add padding-bottom */
 }
 
+/* Style for the question container */
+.question_container {
+  padding-top: 8px; /* add padding-top */
+  padding-bottom: 8px; /* add padding-bottom */
+}
 
+/* Style for paragraph elements within the question container */
 .question_container p {
-  font-size: 1.5em;
+  font-size: 2.8em;
   font-style: italic;
 }
 
-.question_container img {
-  max-width: 90%;
+/* Style for images within the question container */
+.question_container img
+{
+  max-width: 60vw;
   height: auto;
 }
 
+/* Style for the answer container */
 .answer_container {
-  text-align: center;
-  margin: 0 auto;
-  width: 60%;
-  background-color: white;
-  border: 4px double #8B4513;
-  border-radius: 20px;
   display: none;
-  padding-top: 20px; /* add padding-top */
-  padding-bottom: 20px; /* add padding-bottom */
+  padding-top: 14px; /* add padding-top */
+  padding-bottom: 14px; /* add padding-bottom */
 }
 
+/* Style for paragraph elements within the answer container */
 .answer_container p {
-  font-size: 1.5em;
+  font-size: 2.8em;
   font-style: italic;
   margin: 0;
 }
 
+/* Style for images within the answer container */
 .answer_container img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
-#see_answer_button {
+/* Style for the "see answer" button */
+#see_answer_button, #next_question_button {
   margin: 20px 0;
   float: right;
   width: 20%;
+  height: 15%;
   font-size: 1.5em;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 10px 20px;
+  padding: 18px 14px;
   border-radius: 20px;
   border: 2px solid black;
   background-color: white;
 }
 
-#next_question_button {
-  margin: 20px 0;
-  display: none;
-  float: right;
-  width: 20%;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: 2px solid black;
-  background-color: white;
-}
 
+/* Style for the current group container */
 .current_group_container {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 5px auto;
-  width: 30%;
+  margin: 5px auto 5px auto;
   background-color: white;
   border: 5px #8B4513;
   border-radius: 20px;
-  padding-top: 3px; /* add padding-top */
+  padding-top: 3px; /* add padding-top /
   padding-bottom: 3px; /* add padding-bottom */
 }
 
+/* Media query for screens with a maximum width of 800px */
 @media screen and (max-width: 800px) {
-  .group-button {
-    font-size: 1em;
-    padding: 8px 16px;
-  }
+.group-button {
+font-size: 1em;
+padding: 8px 16px;
 }
-
+}

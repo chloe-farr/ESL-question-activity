@@ -1,44 +1,59 @@
 <!-- Index for ESL question & answer web activity-->
 <!DOCTYPE HTML>
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equix="X-UA-Compatible" content="ie=edge">
-	<title>Class V’s Wh- Country Question and Answers</title>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-	<link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equix="X-UA-Compatible" content="ie=edge">
+  <title>ESL game</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-  <body>
-    <header>
-      <h1>Class V’s Wh- Country Question and Answers</h1>
-    </header>
-    <div class="group-button-container">
-      <button class="group-button" onclick="changeGroup(0);">Button 1</button>
-      <button class="group-button" onclick="changeGroup(1);">Button 2</button>
-      <button class="group-button" onclick="changeGroup(2);">Button 3</button>
-      <button class="group-button" onclick="changeGroup(3);">Button 4</button>
-    </div>
-    
+<body>
+  <header>
+    <h1 id="titleName"></h1>
+  </header>
+
+<div class="container">
+  <!-- Container for group buttons -->
+  <div class="group-button-container">
+    <button class="group-button" onclick="changeGroup(0);">Button 1</button>
+    <button class="group-button" onclick="changeGroup(1);">Button 2</button>
+    <button class="group-button" onclick="changeGroup(2);">Button 3</button>
+    <button class="group-button" onclick="changeGroup(3);">Button 4</button>
+
+    <!-- Container for displaying the current group -->
     <div class="current_group_container">
       <p id="current_group_name">current group</p>
     </div>
+  </div>
+  
+  <div class="qa-container">
 
+
+    <!-- Container for displaying the question -->
     <div class="question_container">
       <p id="question_text">This is my question.</p>
       <img id="question_image" src="">
     </div>
 
+    <!-- Container for displaying the answer -->
     <div class="answer_container">
       <p id="answer_text">This is my answer.</p>
       <img id="answer_image" src="">
     </div>
-
+  
+    
+  </div>
+  <!-- Button for showing the answer -->
     <button id="see_answer_button">See Answer</button>
-    <button id="next_question_button">Next Question</button>
-  </body>
-</html>
 
-<script src="js/esl_qa_activity_data.js"></script>
-<script src="js/esl_qa_activity_controls.js"></script>
+    <!-- Button for displaying the next question -->
+    <button id="next_question_button">Next Question</button>
+</div>
+
+  <script src="js/esl_qa_activity_data.js"></script>
+  <script src="js/esl_qa_activity_controls.js"></script>
 
 </body>
+</html>
